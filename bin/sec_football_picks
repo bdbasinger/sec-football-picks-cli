@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative "../sec_football_picks"
+
+run_picks
+
