@@ -22,6 +22,16 @@ def run_picks
   puts "Welcome! Let's see where everyone stands."
 end
 
+
+
+
+
+
+
+
+
+
+
 def contestants
   {
 
@@ -236,7 +246,7 @@ def contestants
   "Mark Clardy" => {
       name: "Mark Clardy",
       ranking: "",
-      score: 0,
+      score: 53,
       money: 0,
 
       picks: {
@@ -746,9 +756,9 @@ def contestants
   },
 
   "Bill Lee" => {
-      name: "",
+      name: "Bill Lee",
       ranking: "",
-      score: 0,
+      score: 51,
       money: 0,
 
       picks: {
@@ -780,7 +790,7 @@ def contestants
   "Chris Carmody" => {
       name: "Chris Carmody ",
       ranking: "",
-      score: 0,
+      score: 49,
       money: 0,
 
       picks: {
@@ -904,7 +914,7 @@ def contestants
           w13: %w[]
       }
   },
-  
+
   "Zach Wood" => {
       name: "Zach Wood",
       ranking: "",
@@ -928,3 +938,21 @@ end
 
 
 
+
+
+
+
+def show_scores
+  a = []
+  contestants.each do |contestant, value|
+    a << ["#{value[:name]}", value[:score]]
+  end
+  a = a.sort_by {|a,b| b}
+  a = a.reverse
+  a.each do |x|
+    puts "#{x[0]}: #{x[1]}"
+  end
+end
+
+
+show_scores
